@@ -12,7 +12,7 @@ const whackAMoleReplace = (s, replacements) => {
   // a bit of whack-a-mole but is necessary since markdown in the CLI is
   // different from the mdx v2 we parse for the docs site
   for (const rep of replacements) {
-    s = s.replace(rep, rep.replace(/([<>{}])/g, '\\$1'))
+    s = s.replace(rep, rep.replace(/([\\<>{}])/g, '\\$1'))
   }
   return s
 }
